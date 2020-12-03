@@ -47,29 +47,26 @@ def parsed_password_data(data_file):
 
         return data_store_ultimate
 
-def passing_passwords(parsed_password_data):
+def passing_passwords_2(parsed_password_data):
     
     # intializing storage variables
 
     x = []
     y = ''
     z = ''
-    l_bound = 0
-    u_bound = 0
+    l_index = 0
+    u_index = 0
     count = 0
     passed = 0
 
     for itr in parsed_password_data:
         x, y, z = itr
-        l_bound = min(x)
-        u_bound = max(x)
-        for i in z:
-            if i == y:
-                count += 1
-        if count >= l_bound and count <= u_bound:
+        l_index = min(x) - 1 
+        u_index = max(x) - 1
+        if z[l_index] == y and z[u_index] != y:
             passed += 1
-        count = 0
-
+        elif z[l_index] != y and z[u_index] == y:
+            passed += 1
     return print(passed)
                 
-passing_passwords(parsed_password_data('data2.txt'))
+passing_passwords_2(parsed_password_data('data2.txt'))
