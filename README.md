@@ -1,4 +1,6 @@
 # advent2020
 advent of code 2020
 
-The advent of code challenge. Being quite new to Python, my goal is to complete these challenges while importing as few libraries as possible. 
+My solutions for the daily problems given in the Advent of Code coding challenges. My goal was to solve each problem while using the built-in functions and methods of Python and importing very little or no libraries. 
+
+I hope you enjoy following along as much as I did solving each problem!
